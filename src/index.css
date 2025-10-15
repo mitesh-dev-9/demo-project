@@ -61,6 +61,60 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  from {
+    transform: rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+  }
+}
+
+@keyframes smooth-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out;
 }
@@ -85,6 +139,30 @@
 
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
+}
+
+.animate-float {
+  animation: float 4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.animate-orbit {
+  animation: orbit 15s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-reverse 15s linear infinite;
+}
+
+.animate-smooth-rotation {
+  animation: smooth-rotation 60s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animation-paused {
+  animation-play-state: paused;
 }
 
 /* Smooth transitions for all interactive elements */

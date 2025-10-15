@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { DollarSign, Loader2, ArrowRight } from 'lucide-react';
+import StablecoinAnimation from './StablecoinAnimation';
 
 interface LandingPageProps {
   onLogin: () => void;
@@ -17,12 +18,12 @@ export default function LandingPage({ onLogin }: LandingPageProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a1929] via-[#1a2f45] to-[#0a1929] flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen w-full bg-gradient-to-br from-[#0a1929] via-[#1a2f45] to-[#0a1929] flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-      </div>
+      </div> */}
 
       <div className="absolute top-8 right-8 z-10">
         <button
@@ -44,7 +45,7 @@ export default function LandingPage({ onLogin }: LandingPageProps) {
         </button>
       </div>
 
-      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-screen-2xl w-full grid lg:grid-cols-2 items-center relative z-10">
         <div className="space-y-8 animate-fade-in">
           <div className="inline-block">
             <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30 animate-pulse-slow">
@@ -97,15 +98,8 @@ export default function LandingPage({ onLogin }: LandingPageProps) {
 
         <div className="flex justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-green-500/30 rounded-full blur-3xl animate-pulse-slow"></div>
-            <div className="relative space-y-6">
-              <div className="w-48 h-48 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl transform translate-x-12 hover:scale-110 transition-transform duration-500">
-                <span className="text-white text-7xl font-bold animate-bounce-gentle">$</span>
-              </div>
-              <div className="w-40 h-40 bg-gradient-to-br from-[#6b9d3e] to-[#5a8534] rounded-full flex items-center justify-center shadow-2xl transform -translate-x-8 -translate-y-8 hover:scale-110 transition-transform duration-500">
-                <span className="text-white text-6xl font-bold">T</span>
-              </div>
-            </div>
+            <div className="absolute -inset-8 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+            <StablecoinAnimation className="relative z-10" />
           </div>
         </div>
       </div>
