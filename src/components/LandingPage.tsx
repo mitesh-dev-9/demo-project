@@ -20,10 +20,10 @@ export default function LandingPage({ onLogin }: LandingPageProps) {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-[#0a1929] via-[#1a2f45] to-[#0a1929] flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background Elements */}
-      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-      </div> */}
+      </div>
 
       <div className="absolute top-8 right-8 z-10">
         <button
